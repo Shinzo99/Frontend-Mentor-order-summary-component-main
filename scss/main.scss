@@ -1,0 +1,171 @@
+@import './base/root.scss';
+@import './base/reset.scss';
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background-color: var(--clr-pale-blue);
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    font-family: var(--ff-primary);
+    
+}
+
+.main {
+    margin-top: auto;
+}
+
+.container {
+    background-color: #fff;
+    margin: 0em 2em;
+    border-radius: 1em;
+    max-width: 22em;
+    
+    img {
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+    }
+}
+
+.card__desc {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-size: var(--fs-600);
+        color: var( --clr-dark-blue);
+        padding: 0.5em;
+    }
+
+    p {
+        text-align: center;
+        font-size: var(--fs-400);
+        color: var(--clr-desaturated-blue);
+        padding: 0.5em 1.5em;
+    }
+
+    button {
+        cursor: pointer;
+    }
+}
+
+.payment__plan {
+    background-color: var(--clr-very-pale-blue);
+    border-radius: 1em;
+    display: flex;
+    padding: 1em 1.5em;
+    margin: 1em;
+    width: 100%;
+    justify-content: space-between;
+
+    p {
+        padding: 0;
+    }
+}
+
+.annual_plan_section {
+
+    padding-right: 2.5em;
+
+    p {
+        display: flex;
+        flex-direction: column;
+    }
+
+    span {
+        font-weight: var(--fw-bold);
+        color: var(--clr-dark-blue);
+    }
+}
+
+#change {
+    text-decoration: underline;
+    color: var(--clr-bright-blue);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-100);
+    padding-top: 1em;
+}
+
+.payment__button {
+    width: 100%;
+    margin-top: .5em;
+    background-color: var(--clr-bright-blue);
+    border: none;
+    border-radius: .75em;
+    padding: .75em;
+    color: #fff;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-bold);
+    box-shadow: 0px 10px 20px 0px #00000050;
+}
+
+.cancel__button {
+    border: none;
+    background-color: transparent;
+    margin-top: 1.5em;
+    margin-bottom: .75em;
+    font-weight: var(--fw-bold);
+    color: var(--clr-desaturated-blue)
+}
+
+.footer {
+    margin-top: auto;
+    padding: 1em;
+}
+
+.attribution {
+    text-align: center;
+
+    span {
+        font-family: var(--ff-primary);
+        font-size: var(--fs-400);
+        color: var(--clr-dark-blue);
+    }
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: var(--clr-very-pale-blue);
+        transition: .2s;
+    }
+}
+
+@media (min-width: 28em) {
+    body {
+        background-image: url('../images/pattern-background-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .container {
+        max-width: 27em;
+    }
+
+    .card__desc {
+        padding: 2em 2.75em;
+    }
+
+    #change:hover {
+        text-decoration: none;
+        cursor: pointer;
+        color: var(--clr-bright-blue-hover);
+        
+    }
+
+    .payment__button:hover {
+        background-color: var(--clr-bright-blue-hover);
+    }
+    
+    .cancel__button:hover {
+        color: #000;
+    }
+}
